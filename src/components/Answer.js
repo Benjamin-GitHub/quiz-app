@@ -1,6 +1,9 @@
 const Answer = () => {
     return (
-        <div>Answer</div>
+        <div className="answer">
+            <div className="answer-letter">A</div>
+            <div className="answer-text">Answer</div>
+        </div>
     )
 }
 

@@ -1,13 +1,15 @@
 import Answer from "./Answer";
 
-const Question = () => {
+const Question = ({questions}) => {
     return (
         <div>
-            <div>Question</div>
-            <Answer />
-            <Answer />
-            <Answer />
-            <Answer />
+            <div className="question">Question</div>
+            <div className="answers">
+                <Answer />
+                <Answer />
+                <Answer />
+                <Answer />
+            </div>
         </div>
     )
 }

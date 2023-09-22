@@ -8,10 +8,11 @@ const Quiz = () => {
  
   // const [currentQuestionIndex, setCurrentQuestion] = useState(0);
   // console.log("currentQuestionIndex", currentQuestionIndex);
+
   return (
     <div className="quiz">
       <div>
-        <div className="score">Question 1/8</div>
+        <div className="score">Question {quizState.currentQuestionIndex + 1} / {quizState.questions.length}</div>
         <Question />
         <div className="next-button" onClick={() => dispatch({type: "Next_Question"})}>Next question</div>
       </div>

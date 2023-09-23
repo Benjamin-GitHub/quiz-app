@@ -5,13 +5,19 @@ const initialState = {
     currentQuestionIndex: 0,
     // shorten for: questions = questions
     questions,
+    showResults: false,
   };
   
   const reducer = (state , action) => {
     if (action.type === "Next_Question") {
+      const showResults = state.currentQuestionIndex === state.questions.length - 1;
+      const currentQuestionIndex = showResults
+      ? state.currentQuestionIndex
+      : state.currentQuestionIndex + 1;
       return {
         ...state,
-        currentQuestionIndex: state.currentQuestionIndex + 1,
+        currentQuestionIndex,
+        showResults,
       };
     }
     return state;

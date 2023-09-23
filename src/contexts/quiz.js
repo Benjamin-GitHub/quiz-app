@@ -20,6 +20,11 @@ const initialState = {
         showResults,
       };
     }
+
+    if (action.type === "RESTART") {
+      return initialState;
+    };
+    
     return state;
   };
 

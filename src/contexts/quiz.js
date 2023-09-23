@@ -6,6 +6,7 @@ const initialState = {
     // shorten for: questions = questions
     questions,
     showResults: false,
+    answers: [],
   };
   
   const reducer = (state , action) => {
@@ -20,6 +21,11 @@ const initialState = {
         showResults,
       };
     }
+
+    if (action.type === "RESTART") {
+      return initialState;
+    };
+    
     return state;
   };
 
